@@ -1,6 +1,6 @@
 # Demo-Shiny 
 
-Welcome to the Github repo. it is a demo app contains two parts.
+Welcome to the Github repo. it is a demo app containing two parts.
 
 ## Data part
 It can import the SAS datasets, display the data and do some basic tidy-up like sorting, filtering, and variable selection.Finally,

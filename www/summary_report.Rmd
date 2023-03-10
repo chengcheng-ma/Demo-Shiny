@@ -1,0 +1,30 @@
+---
+title: "Report"
+output: word_document
+date: "`r Sys.Date()`"
+params:
+  n: NA
+  type: NA
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r,echo=FALSE,results='asis'}
+if(params$type==F){
+  subchunkify(plot(), 6, 15)
+}else{
+  width<-params$n/2+3
+  if(width<=18){
+    subchunkify(plot(), width, 15)
+  }else{
+    subchunkify(plot_cut(), 18, 15)
+    
+    knitr::asis_output("Note: Too many classifications, just show the top 30.")
+    
+  }
+}
+
+```
